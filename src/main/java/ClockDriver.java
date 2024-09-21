@@ -136,5 +136,48 @@ public class ClockDriver
         //  * Tick test for 11:59PM to 12:00AM
         //  * Tick test for 11:59AM to 12:00PM
         //  * Tick test for 12:59PM to 01:00PM
+        ClockDisplay12Hour test10 = new ClockDisplay12Hour();
+        String test10Output = test10.getTime();
+        System.out.println(test10Output);
+        
+        ClockDisplay12Hour test11 = new ClockDisplay12Hour(14,32);
+        String test11Output = test11.getTime();
+        System.out.println(test11Output);
+        
+        test11.setTime(2,45);
+        String test13Output = test11.getTime();
+        System.out.println(test13Output);
+        
+        System.out.println("Tick test 1");
+        ClockDisplay12Hour tickTest14 = new ClockDisplay12Hour(15,32);
+        String tickTest14Output = tickTest14.getTime();
+        System.out.println(tickTest14Output); //before increment
+        tickTest14.timeTick();
+        tickTest14Output = tickTest14.getTime();
+        System.out.println(tickTest14Output);
+        
+        System.out.println("Tick test 2");
+        ClockDisplay12Hour tickTest15 = new ClockDisplay12Hour(23,59);
+        String tickTest15Output = tickTest15.getTime();
+        System.out.println(tickTest15Output); //before increment
+        tickTest15.timeTick();
+        tickTest15Output = tickTest15.getTime();
+        System.out.println(tickTest15Output);
+        
+        System.out.println("Tick test 3");
+        ClockDisplay12Hour tickTest16 = new ClockDisplay12Hour(11,59);
+        String tickTest16Output = tickTest16.getTime();
+        System.out.println(tickTest16Output); //before increment
+        tickTest16.timeTick();
+        tickTest16Output = tickTest16.getTime();
+        System.out.println(tickTest16Output);
+        
+        System.out.println("Tick test 4");
+        ClockDisplay12Hour tickTest17 = new ClockDisplay12Hour(12,59);
+        String tickTest17Output = tickTest17.getTime();
+        System.out.println(tickTest17Output); //before increment
+        tickTest17.timeTick();
+        tickTest17Output = tickTest17.getTime();
+        System.out.println(tickTest17Output);
     }
 }
